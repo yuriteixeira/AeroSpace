@@ -33,6 +33,10 @@ default-root-container-layout = 'list'
 #               tall display (anything higher than wide) gets vertical orientation
 default-root-container-orientation = 'auto'
 
+# If enabled, focused window changes as the mouse crosses borders
+# floating windows are ignored
+focus-follows-mouse = false
+
 # It's a declaration of 'main' binding mode. See: https://github.com/nikitabobko/AeroSpace/blob/main/docs/guide.md#bindings-modes
 # 'main' binding mode must be always presented
 [mode.main.binding]

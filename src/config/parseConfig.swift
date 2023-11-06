@@ -92,6 +92,7 @@ private let parsers: [String: any ParserProtocol] = [
 
     "indent-for-nested-containers-with-the-same-orientation": Parser(\.indentForNestedContainersWithTheSameOrientation, { parseInt($0, $1) }),
     "start-at-login": Parser(\.startAtLogin, { parseBool($0, $1) }),
+    "focus-follows-mouse": Parser(\.focusFollowsMouse, { parseBool($0, $1) }),
     "accordion-padding": Parser(\.accordionPadding, { parseInt($0, $1) }),
 ]
 
@@ -133,6 +134,7 @@ func parseConfig(_ rawToml: String) -> (config: Config, errors: [TomlParseError]
         startAtLogin: raw.startAtLogin ?? defaultConfig.startAtLogin,
         accordionPadding: raw.accordionPadding ?? defaultConfig.accordionPadding,
         enableNormalizationOppositeOrientationForNestedContainers: raw.enableNormalizationOppositeOrientationForNestedContainers ?? defaultConfig.enableNormalizationOppositeOrientationForNestedContainers,
+        focusFollowsMouse: raw.focusFollowsMouse ?? defaultConfig.focusFollowsMouse,
 
         modes: modesOrDefault,
         preservedWorkspaceNames: modesOrDefault.values.lazy

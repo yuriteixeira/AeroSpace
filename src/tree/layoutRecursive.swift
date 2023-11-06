@@ -17,9 +17,10 @@ extension TreeNode {
                 lastAppliedLayoutRect = rect
                 window.setTopLeftCorner(point)
                 window.setSize(CGSize(width: width, height: height))
-                if startup { // It makes the layout more good-looking on the start. Good first impression
-                    window.focus()
-                }
+                // todo drop
+                //if startup { // It makes the layout more good-looking on the start. Good first impression
+                //    window.focus()
+                //}
             }
         case .tilingContainer(let container):
             lastAppliedLayoutRect = rect
